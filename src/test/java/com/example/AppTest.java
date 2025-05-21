@@ -1,7 +1,6 @@
 package com.example;
 
 import java.io.File;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -72,7 +71,7 @@ public class AppTest {
                 Statement.RETURN_GENERATED_KEYS);
             insertStmt.setString(1, "Delete Me");
             insertStmt.setDate(2, Date.valueOf(LocalDate.now()));
-            insertStmt.setBigDecimal(3, new BigDecimal("50.00"));
+            insertStmt.setDouble(3,100.00);
             insertStmt.setString(4, "PENDING");
             insertStmt.executeUpdate();
 
